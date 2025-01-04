@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="hero-title">Welcome to Society-View</h1>
+        <p class="hero-subtitle">Your trusted platform for managing society building tasks</p>
+        <a href="#services" class="btn explore-btn">Explore Services</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section" id="services">
+    <div class="container">
+        <h2 class="section-title text-center">Our Services</h2>
+        <div class="row">
+            <!-- Feature 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="feature-card text-center">
+                    <i class="bi bi-house-door-fill feature-icon"></i>
+                    <h4 class="feature-title">Property Management</h4>
+                    <p class="feature-description">Manage and view all property-related updates in real-time.</p>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="feature-card text-center">
+                    <i class="bi bi-wallet2 feature-icon"></i>
+                    <h4 class="feature-title">Pay Maintenance</h4>
+                    <p class="feature-description">Pay your society’s maintenance fees quickly and securely.</p>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="feature-card text-center">
+                    <i class="bi bi-people-fill feature-icon"></i>
+                    <h4 class="feature-title">Community Connection</h4>
+                    <p class="feature-description">Connect with fellow society members and stay updated with notices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock 'main' %}
+
