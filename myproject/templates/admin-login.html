@@ -13,13 +13,13 @@
     {% endif %}
 
     <!-- Login Form -->
-    <h2 class="login-header">Welcome to Santa's Treasure</h2>
+    <h2 class="login-header">Admin Login for Society-View</h2>
     <form action="#" method="POST">
       {% csrf_token %}
       <div class="mb-4 input-group">
         <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
         <input
-          type="email"
+          type="text"
           name="ue"
           class="form-control"
           placeholder="Enter your email"
@@ -39,11 +39,10 @@
       <button type="submit" class="btn btn-custom w-100">Login</button>
     </form>
     <!-- Forgot password link -->
-    <div class="forget-pass text-center mt-3">
+    <!-- <div class="forget-pass text-center mt-3">
       <a href="/register" style="color: #ff204e;">Don’t have an account? Register here!</a>
-    </div>
+    </div> -->
   </div>
 </div>
 
 {% endblock 'main' %}
-

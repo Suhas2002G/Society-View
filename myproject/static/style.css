@@ -7,6 +7,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body{
   background-color: #E9EFEC;
@@ -17,33 +18,21 @@ body{
 
 /* header.html starts here  */
 .custom-navbar {
-  background-color: #16423C; 
+  background-color: #16423C; /* Dark primary color for navbar */
   padding: 10px 20px;
   height: 80px;
 }
 
-.custom-brand {
+.navbar-brand {
+  color: #E9EFEC; /* Light text color */
+  font-weight: 700;
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #E9EFEC; /* Light text color */
+  text-transform: uppercase;
 }
 
-.custom-brand:hover {
+.navbar-brand:hover {
+  color: #6A9C89; /* Accent color on hover */
   text-decoration: none;
-  color: #C4DAD2; /* Accent color */
-}
-
-.custom-link {
-  color: #E9EFEC; /* Light text color */
-  margin-right: 55px;
-  /* transition: color 0.3s; */
-}
-
-.custom-link:hover {
-  color: #6A9C89; /* Highlight color */
-  text-decoration: none;
-  border: 2px solid #6A9C89;
-  border-radius: 20px;
 }
 
 .navbar-toggler {
@@ -51,7 +40,49 @@ body{
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23E9EFEC' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(233, 239, 236, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-color: #E9EFEC;
+  width: 20px;
+  height: 3px;
+  display: block;
+  margin: 3px auto;
+}
+
+.navbar-nav .nav-link {
+  color: #E9EFEC; /* Light text color */
+  margin: 0 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #C4DAD2; /* Hover with softer tone */
+}
+
+.navbar-nav .active {
+  color: #6A9C89; /* Highlight active link */
+  font-weight: 700;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  background-color: #16423C;
+  border: none;
+}
+
+.dropdown-item {
+  color: #E9EFEC;
+}
+
+.dropdown-item:hover {
+  background-color: #6A9C89;
+  color: #16423C;
+}
+
+/* Custom Link Hover Effect */
+.custom-link:hover {
+  color: #C4DAD2;
+  transition: color 0.3s ease-in-out;
 }
 
 /* header.html endss here  */
@@ -62,6 +93,9 @@ body{
   background-color: #16423C; /* Primary color */
   color: #E9EFEC; /* Light text color */
   padding: 30px 0;
+  /* position: sticky;
+  bottom: 0;
+  width: 100%; */
 }
 
 .footer-title {
@@ -113,11 +147,204 @@ body{
 /* footer.html ends here  */
 
 
+/* login.html starts here   */
+.container-bg-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 76vh;
+  background-repeat:repeat-x;
+    background-image: url('https://society24x7.com/wp-content/uploads/2019/07/home-banner.jpg');
+}
+
+.login-container {
+  background-color: #16423C; /* Dark green */
+  color: #E9EFEC;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Header Styling */
+.login-header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #C4DAD2;
+}
+
+/* Alert Styling */
+.custom-alert {
+  background-color: #C4DAD2; 
+  color: #16423C; 
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.custom-alert i {
+  font-size: 1.2rem;
+}
+
+/* Input Group Styling */
+.input-group-text {
+  background-color: #6A9C89;
+  color: #16423C;
+  border: none;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 5px #6A9C89;
+}
+
+/* Button Styling */
+.btn-custom {
+  background-color: #6A9C89;
+  color: #16423C;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-custom:hover {
+  background-color: #C4DAD2;
+  color: #16423C;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Forgot Password Link */
+.forget-pass a {
+  color: #6A9C89;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forget-pass a:hover {
+  text-decoration: underline;
+  color: #C4DAD2;
+}
+/* login.html ends here   */
+
+
+
+/* register.html starts here   */
+.container-bg-register {
+  background-color: #C4DAD2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Registration container styling */
+.register-container {
+  background-color: #E9EFEC;
+  border: 1px solid #6A9C89;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.register-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #16423C;
+}
+
+/* Input field styling */
+.form-control {
+  border: 1px solid #6A9C89;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Button styling */
+.btn-custom {
+  background-color: #16423C;
+  color: #E9EFEC;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: #6A9C89;
+}
+
+/* Alert styling */
+.custom-alert {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.alert-danger {
+  background-color: #FFB3B3;
+  color: #731717;
+  border: 1px solid #FF7373;
+}
+
+.alert-success {
+  background-color: #C4DAD2;
+  color: #16423C;
+  border: 1px solid #6A9C89;
+}
+
+/* Login redirect link styling */
+.already-account {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.already-account a {
+  color: #6A9C89;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.already-account a:hover {
+  color: #16423C;
+}
+/* register.html ends here   */
+
+
 /* home.html starts here  */
-/* Hero Section */
 .hero-section {
-  /* background-image: url('https://society24x7.com/wp-content/uploads/2019/07/home-banner.jpg'); */
+  /* background-image: url("{% static '/images/bg.png' %}"); */
+
   background-image: url('https://thesocietymanager.org/wp-content/uploads/2023/12/view-landmark-asian-sky-reflection-1.jpg');
+  /* background-image: url('https://arcloop.com/projects/zencommercepro/ritesociety/banner_new.jpg'); */
   color: #ffffff;
   padding: 100px 0;
   height: 75vh;
@@ -188,3 +415,459 @@ body{
   color: #555;
 }
 /* home.html ends here  */
+
+
+
+/* owner-home.html starts here  */
+.owner-home-container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.owner-home-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.owner-home-notice-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.owner-home-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 15px;
+}
+
+.owner-home-card-header h5 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: #4CAF50;
+}
+
+.owner-home-card-body p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.owner-home-notice-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.owner-home-no-notices {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+/* owner-home.html ends here  */
+
+
+
+/* owner-maintenance.html starts here  */
+.owner-maintenance-container {
+  margin: 20px auto;
+  padding: 25px;
+  /* background-color: #f9f9f9; */
+  border-radius: 8px;
+}
+
+.owner-maintenance-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.owner-maintenance-payment, .owner-maintenance-history {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.owner-maintenance-payment-title, .owner-maintenance-history-title {
+  font-size: 20px;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.owner-maintenance-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.owner-maintenance-input {
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.owner-maintenance-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.owner-maintenance-btn:hover {
+  background-color: #45a049;
+}
+
+.owner-maintenance-history-table th, .owner-maintenance-history-table td {
+  text-align: center;
+  padding: 10px;
+}
+
+.owner-maintenance-history-table th {
+  background-color: #f1f1f1;
+}
+
+.owner-maintenance-history-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.owner-maintenance-history-table td {
+  color: #555;
+}
+
+.owner-maintenance-history-table .text-center {
+  color: #888;
+}
+
+/* owner-maintenance.html ends here  */
+
+
+
+
+
+/* ADMIN CSS */
+
+
+/* admin-dashboard.html starts here   */
+.admin-dash-sidebar {
+  /* background-color: #16423C; */
+  background-color: #FFFFFF;
+  color: #16423C;
+  height: 90vh;
+  padding: 1rem;
+}
+.admin-dash-sidebar .nav-link {
+  color: #16423C;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.admin-dash-sidebar .nav-link:hover {
+  color: #FFFFFF;
+  background-color: #16423C;
+  border-radius: 10px;
+  transition: ease-in-out 0.2s;
+  
+}
+.admin-dash-header {
+  background-color: #6A9C89;
+  color: #FFFFFF;
+  padding: 0.5rem;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.admin-dash-content {
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* admin-dashboard.html ends here   */
+
+
+/* admin-addnotice.html starts here  */
+.admin-notice-container {
+  margin-top: 20px;
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-notice-title {
+  color: #424242;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-notice-field {
+  margin-bottom: 15px;
+}
+
+.admin-notice-label {
+  font-weight: bold;
+  color: #424242;
+}
+
+.admin-notice-input,
+.admin-notice-select,
+.admin-notice-textarea {
+  border: 1px solid #229799;
+  border-radius: 5px;
+}
+
+.admin-notice-input:focus,
+.admin-notice-select:focus,
+.admin-notice-textarea:focus {
+  outline: none;
+  border-color: #48CFCB;
+  box-shadow: 0 0 5px rgba(72, 207, 203, 0.5);
+}
+
+.admin-notice-submit {
+  background-color: #229799;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.admin-notice-submit:hover {
+  background-color: #48CFCB;
+}
+/* admin-addnotice.html ends here  */
+
+
+
+/* admin-viewnotice.html starts here  */
+.admin-notice-view-container {
+  margin-top: 20px;
+}
+
+.admin-notice-view-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-notice-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-notice-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.admin-notice-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.admin-notice-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.admin-notice-category,
+.admin-notice-priority {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.admin-notice-actions {
+  margin-top: 10px;
+  
+}
+
+.admin-notice-edit-btn {
+  margin-right: 10px;
+  width: 150px;
+}
+
+.admin-notice-delete-btn{
+  margin-right: 10px;
+  width: 150px;
+}
+
+.admin-notice-add-btn {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* admin-viewnotice.html starts here  */
+
+
+
+/* admin-usermanage.html starts here  */
+.admin-usermanage-container {
+  margin-top: 30px;
+}
+
+.admin-usermanage-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.admin-usermanage-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-usermanage-table th, .admin-usermanage-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-usermanage-table th {
+  background-color: #f4f4f4;
+}
+
+.admin-usermanage-success {
+  margin-top: 20px;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.admin-usermanage-danger {
+  margin-top: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.admin-usermanage-edit-btn, .admin-usermanage-delete-btn {
+  margin-right: 10px;
+}
+
+.admin-usermanage-add-btn {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+}
+/* admin-usermanage.html ends here  */
+
+
+/* admin-addAmenity.html start here  */
+.admin-amenity-container {
+  margin-top: 20px;
+
+}
+
+.admin-amenity-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.admin-amenity-field {
+  margin-bottom: 15px;
+}
+
+.admin-amenity-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.admin-amenity-input, .admin-amenity-textarea {
+  width: 100%;
+}
+
+.admin-amenity-submit {
+  margin-top: 20px;
+}
+
+.admin-amenity-success {
+  margin-top: 20px;
+}
+
+.admin-amenity-danger {
+  margin-top: 20px;
+}
+
+/* admin-addAmenity.html ends here  */
+
+
+
+.admin-amenity-view-container {
+  margin-top: 20px;
+
+}
+
+.admin-amenity-view-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.admin-amenity-view-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.admin-amenity-view-card {
+  width: 100%;
+  max-width: 350px;
+
+}
+
+.admin-amenity-view-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.admin-amenity-view-body {
+  padding: 15px;
+}
+
+.admin-amenity-view-description {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.admin-amenity-view-rent {
+  /* font-weight: bold; */
+  font-size: 16px;
+}
+
+.btn-edit-amenity{
+  width: 45%;
+  margin-right: 10px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+.admin-amenity-view-add-btn {
+  margin-bottom: 30px;
+  width: 250px;
+
+}
