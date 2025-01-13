@@ -40,16 +40,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active custom-link" href="#"><i class="bi bi-house mx-1"></i>Home</a>
-            </li>
+            
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link custom-link" href="#"><i class="bi bi-envelope mx-2"></i>Notices</a>
+              <a class="nav-link active custom-link" href="/owner-home"><i class="bi bi-house mx-1"></i>Home</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link custom-link" href="#">Maintenance</a>
-            </li> -->
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="/owner-notice"><i class="bi bi-envelope mx-2"></i>Notices</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="/owner-book-amenity"><i class="bi bi-envelope mx-2"></i>Book Amenity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="owner-maintenance">Maintenance</a>
+            </li>
             <!-- <li class="nav-item">
               <a class="nav-link custom-link" href="#">Contact Us</a>
             </li> -->
@@ -60,6 +64,9 @@
               <a class="nav-link" href="/myprofile"><i class="bi bi-person-circle mx-2"></i>Profile</a>
           </li>
             {% else %}
+            <li class="nav-item">
+              <a class="nav-link active custom-link" href="/"><i class="bi bi-house mx-1"></i>Home</a>
+            </li>
   
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle custom-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,22 +83,6 @@
       </div>
     </nav>
 
-
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Sidebar -->
-        <div class="col-md-2 col-sm-4 admin-dash-sidebar ">
-          <!-- <h2>Quick Links</h2> -->
-          <nav class="nav flex-column mt-3">
-            <a class="nav-link" href="/owner-home">Home</a>
-            <a class="nav-link" href="/owner-notice">Notices</a>
-            <a class="nav-link" href="">Owner Details</a>
-            <a class="nav-link" href="/owner-maintenance">Maintenance</a>
-            <a class="nav-link" href="/owner-book-amenity">Amenity Booking</a>
-            <a class="nav-link" href="#">Raise Complaints</a>
-            <a class="nav-link" href="/logout">Logout</a>
-          </nav>
-        </div>
 
 
     

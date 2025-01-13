@@ -420,56 +420,185 @@ body{
 
 /* owner-home.html starts here  */
 .owner-home-container {
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
+  padding: 30px;
+  background-color: #f7f9fc;
+  min-height: 100vh;
 }
 
+/* Page Header */
 .owner-home-title {
-  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2e3a59;
+  margin-bottom: 10px;
+}
+
+.owner-home-subtitle {
+  font-size: 1.25rem;
+  color: #6c757d;
   margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
 }
 
-.owner-home-notice-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+/* Section Titles */
+.owner-home-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #f39c12;
+  border-bottom: 3px solid #f39c12;
+  display: inline-block;
 }
 
+/* Card Styles */
 .owner-home-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 25px;
 }
 
-.owner-home-card-header h5 {
-  font-size: 18px;
-  margin: 0 0 10px;
-  color: #4CAF50;
+.owner-home-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.owner-home-card-body p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #555;
+.owner-home-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #34495e;
 }
 
-.owner-home-notice-date {
-  font-size: 12px;
-  color: #999;
+.owner-home-card-text {
+  font-size: 1rem;
+  color: #7f8c8d;
 }
 
-.owner-home-no-notices {
+/* Button Styles */
+.owner-home-btn {
+  background-color: #e67e22;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.owner-home-btn:hover {
+  background-color: #d35400;
+  transform: scale(1.05);
+}
+
+/* Statistics Section */
+.owner-home-stat-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.owner-home-stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #16a085;
+}
+
+.owner-home-stat-text {
+  font-size: 1.1rem;
+  color: #95a5a6;
+}
+
+/* Event Cards */
+.owner-home-event-card {
+  border: none;
+  border-radius: 10px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.owner-home-event-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.owner-home-event-text {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+/* Profile Section */
+.owner-home-profile-card {
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  font-size: 16px;
-  color: #888;
+}
+
+.owner-home-profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #2ecc71;
+  margin-bottom: 20px;
+}
+
+.owner-home-profile-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.owner-home-profile-email {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .owner-home-title {
+      font-size: 2.3rem;
+  }
+
+  .owner-home-subtitle {
+      font-size: 1.1rem;
+  }
+
+  .owner-home-section-title {
+      font-size: 1.6rem;
+  }
+
+  .owner-home-stat-value {
+      font-size: 2rem;
+  }
+
+  .owner-home-card-title {
+      font-size: 1.1rem;
+  }
+
+  .owner-home-event-title {
+      font-size: 1.2rem;
+  }
+
+  .owner-home-profile-img {
+      width: 100px;
+      height: 100px;
+  }
+
+  .owner-home-profile-name {
+      font-size: 1.5rem;
+  }
+
+  .owner-home-profile-email {
+      font-size: 1rem;
+  }
 }
 
 /* owner-home.html ends here  */
@@ -480,7 +609,6 @@ body{
 .owner-maintenance-container {
   margin: 20px auto;
   padding: 25px;
-  /* background-color: #f9f9f9; */
   border-radius: 8px;
 }
 

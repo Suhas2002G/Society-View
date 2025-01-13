@@ -1,56 +1,130 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block 'main' %}
-<div class="col-md-10 col-sm-8 mb-2">
-    <div class="container admin-notice-view-container">
-        <h1 class="admin-notice-view-title">Notices</h1>
 
-        <!-- Success/Error messages -->
-        {% if successmsg %}
-        <div id="success" class="alert alert-success admin-notice-view-success" role="alert">
-            {{ successmsg }}
+<div class="container owner-home-container mt-4">
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <h1 class="owner-home-title">Welcome to Society Management System</h1>
+            <p class="owner-home-subtitle">Manage your society-related tasks effortlessly with our modern dashboard.</p>
         </div>
-        {% elif errormsg %}
-        <div id="error" class="alert alert-danger admin-notice-view-danger" role="alert">
-            {{ errormsg }}
-        </div>
-        {% endif %}
+    </div>
 
-        <!-- Notices Cards -->
-        <div class="admin-notice-cards">
-            {% for notice in notices %}
-            <div class="card admin-notice-card mb-3">
-                <div class="row g-0">
-                    <div class="col-md-12">
-                        <div class="card-body">
-                            <h5 class="card-title admin-notice-title">{{ notice.title }}</h5>
-                            <p class="card-text admin-notice-category">
-                                <strong>Category:</strong> {{ notice.category }}
-                            </p>
-                            <p class="card-text admin-notice-priority">
-                                <strong>Priority:</strong> {{ notice.priority }}
-                            </p>
-                            <p class="card-text admin-notice-description">{{ notice.des }}</p>
-                            
-            
-                            <p class="card-text">
-                                <small class="text-muted">
-                                    <strong></strong> {{ notice.created_at|date:"d-m-Y H:i:s" }}
-                                </small>
-                                
-                            </p>
-                            <!-- <div class="admin-notice-actions">
-                                <a href="" class="btn btn-warning admin-notice-edit-btn">Edit</a>
-                                <a href="" class="btn btn-danger admin-notice-delete-btn">Delete</a>
-                            </div> -->
-                        </div>
-                    </div>
+    <!-- Announcements Section -->
+    <div class="row owner-home-announcements mb-4">
+        <div class="col-12">
+            <h2 class="owner-home-section-title">Latest Announcements</h2>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card owner-home-card">
+                <div class="card-body">
+                    <h5 class="owner-home-card-title">Maintenance Payment Reminder</h5>
+                    <p class="owner-home-card-text">Pay your monthly maintenance of Rs. 1000 by 31st January 2025 to avoid penalties.</p>
+                    <a href="#" class="btn btn-primary owner-home-btn">View Details</a>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        <div class="col-md-4 mb-3">
+            <div class="card owner-home-card">
+                <div class="card-body">
+                    <h5 class="owner-home-card-title">Republic Day Event</h5>
+                    <p class="owner-home-card-text">Join us for the Republic Day celebrations on 26th January at 9 AM in the clubhouse.</p>
+                    <a href="#" class="btn btn-primary owner-home-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card owner-home-card">
+                <div class="card-body">
+                    <h5 class="owner-home-card-title">Water Supply Notice</h5>
+                    <p class="owner-home-card-text">Water supply will be interrupted on 22nd January 2025 from 10 AM to 5 PM.</p>
+                    <a href="#" class="btn btn-primary owner-home-btn">Read Notice</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    
+    <!-- Society Statistics Section -->
+    <div class="row owner-home-statistics mb-4">
+        <div class="col-12">
+            <h2 class="owner-home-section-title">Society Statistics</h2>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="card text-center owner-home-stat-card">
+                <div class="card-body">
+                    <h3 class="owner-home-stat-value">120</h3>
+                    <p class="owner-home-stat-text">Total Flats</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="card text-center owner-home-stat-card">
+                <div class="card-body">
+                    <h3 class="owner-home-stat-value">100</h3>
+                    <p class="owner-home-stat-text">Occupied Flats</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="card text-center owner-home-stat-card">
+                <div class="card-body">
+                    <h3 class="owner-home-stat-value">15</h3>
+                    <p class="owner-home-stat-text">Open Complaints</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="card text-center owner-home-stat-card">
+                <div class="card-body">
+                    <h3 class="owner-home-stat-value">₹2,00,000</h3>
+                    <p class="owner-home-stat-text">Maintenance Collected</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Events Section -->
+    <div class="row owner-home-events mb-4">
+        <div class="col-12">
+            <h2 class="owner-home-section-title">Upcoming Events</h2>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card owner-home-event-card">
+                <div class="card-body">
+                    <h5 class="owner-home-event-title">Yoga Classes</h5>
+                    <p class="owner-home-event-text">Daily yoga classes start from 1st February 2025 at 7 AM in the garden area.</p>
+                    <a href="#" class="btn btn-secondary owner-home-btn">Join Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card owner-home-event-card">
+                <div class="card-body">
+                    <h5 class="owner-home-event-title">Annual General Meeting</h5>
+                    <p class="owner-home-event-text">The AGM will be held on 15th February 2025 at 6 PM in the clubhouse.</p>
+                    <a href="#" class="btn btn-secondary owner-home-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Owner Profile Section -->
+    <div class="row owner-home-profile mb-4">
+        <div class="col-12 text-center">
+            <h2 class="owner-home-section-title">Owner Profile</h2>
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <div class="card owner-home-profile-card">
+                <div class="card-body text-center">
+                    <img src="{% static 'images/profile-placeholder.png' %}" alt="Profile Picture" class="rounded-circle mb-3 owner-home-profile-img">
+                    <h5 class="owner-home-profile-name">John Doe</h5>
+                    <p class="owner-home-profile-email">john.doe@example.com</p>
+                    <a href="#" class="btn btn-warning owner-home-btn">Edit Profile</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
 {% endblock 'main' %}
